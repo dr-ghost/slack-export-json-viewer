@@ -107,3 +107,4 @@ for var in list_Dict:
         json_to_py()
         os.chdir("C:\\Users\Vijay\Desktop\pyproj")
 html_closing()
+fil.close()
