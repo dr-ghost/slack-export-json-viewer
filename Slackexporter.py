@@ -108,15 +108,15 @@ def html_closing():
     fil.write("</Body>" + '\n')
     fil.write("</Html>")
 
-
-os.chdir("C:\\Users\Vijay\Desktop\pyproj")
+daemon_ghost()
+os.chdir(input('enter path to directory of export'))
 list_Dict = os.listdir()
 fil = open("slack_export.html", "w")
 html_opening()
 for var in list_Dict:
     if os.path.isdir(var):
         os.chdir(var)
-        json_to_py()
+        json_to_htm()
         os.chdir("C:\\Users\Vijay\Desktop\pyproj")
 html_closing()
 fil.close()
