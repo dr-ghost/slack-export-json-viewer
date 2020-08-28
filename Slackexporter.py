@@ -76,7 +76,7 @@ def json_to_htm():
 
 
 def user_s_message(user_id):
-    os.chdir("C:\\Users\Vijay\Desktop\pyproj")
+    os.chdir(expo_dir)
     us_file = open("users.json", "r")
     usr = json.load(us_file)
     for war in usr:
@@ -109,7 +109,8 @@ def html_closing():
     fil.write("</Html>")
 
 daemon_ghost()
-os.chdir(input('enter path to directory of export'))
+expo_dir = input("enter path to directory of export")
+os.chdir(expo_dir)
 list_Dict = os.listdir()
 fil = open("slack_export.html", "w")
 html_opening()
@@ -117,6 +118,6 @@ for var in list_Dict:
     if os.path.isdir(var):
         os.chdir(var)
         json_to_htm()
-        os.chdir("C:\\Users\Vijay\Desktop\pyproj")
+        os.chdir(expo_dir)
 html_closing()
 fil.close()
