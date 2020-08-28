@@ -18,7 +18,7 @@ def daemon_ghost():
              || ))      ||          \\  |  |   |||||||||||||||      ||         ||        (__________)       |||||||||||        ||
              ||""")
 
-def json_to_htnl():
+def json_to_htm():
     list_file = os.listdir()
     if len(list_file) != 0:
         fil.write("<H3>")
