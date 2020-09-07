@@ -1,6 +1,7 @@
 import os
 import json
 import datetime
+from webbrowser import open_new
 # for slack messages
 # Made by Anshul Thakur
 # Copyrights Ghost
@@ -121,3 +122,5 @@ for var in list_Dict:
         os.chdir(expo_dir)
 html_closing()
 fil.close()
+fil.flush()
+open_new("file:///"+expo_dir+"//slack_export.html")
